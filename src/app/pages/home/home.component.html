@@ -1,0 +1,14 @@
+<h1>Out MongoDB is working!</h1>
+
+
+<input type="text" name="user" [(ngModel)]="user.firstName">
+<input type="text" name="user" [(ngModel)]="user.lastName">
+<button class="btn btn-default" (click)='addUser(user)'>Add new</button>
+
+
+<ul>
+  <li *ngFor="let user of users">{{ user.firstName }} {{user.lastName}}
+    <br> ID: {{user._id}}
+    <button class="btn btn-default" (click)="onDelete(user._id)">Remove</button>
+  </li>
+</ul>
